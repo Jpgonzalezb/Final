@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title text-center>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (submit)="doSignup()">
+      <div text-center><img src="assets/img/reusalo.png"width= 100% height= 80% >
+      </div>  
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>{{ 'NAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      <!--
+      Want to add a Username? Here you go:
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item>
+      -->
+
+      <ion-item>
+        <ion-label floating>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="secondary" full>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>
